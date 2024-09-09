@@ -18,3 +18,4 @@ const rdb = getDatabase(app);
 const db = getFirestore(app);
 
 export { rdb, db, ref, set, get };
+console.log('aj')
