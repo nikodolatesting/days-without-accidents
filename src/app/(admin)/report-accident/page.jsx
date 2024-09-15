@@ -14,13 +14,14 @@ export default async function Admin(){
         const description = await formData.get('description')
         const cookiesStore = cookies()
         const lastAccident = cookiesStore.get('lastClick')?.value
+  
         
         await setNewAccident({
             title,
             description,
             time,
             department,
-            lastAccident, 
+            lastAccident,
         })
     }
     
