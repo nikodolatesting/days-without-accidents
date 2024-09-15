@@ -20,7 +20,7 @@ export default async function Admin(){
             description,
             time,
             department,
-            lastAccident,
+            lastAccident, 
         })
     }
     
