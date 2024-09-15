@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/Counter.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/Counter.jsx", "src/app/page.jsx", "src/firebase/action.jsx", "src/app/(admin)/report-accident/page.jsx", "src/app/(admin)/departments/page.jsx", "src/app/layout.tsx"],
   "exclude": ["node_modules"]
 }

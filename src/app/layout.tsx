@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import {WrapFunction} from '@/context/userContext'
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -12,10 +13,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <WrapFunction>
     <html lang="en">
       <body>
         {children}
       </body>
     </html>
+    </WrapFunction>
   );
 }

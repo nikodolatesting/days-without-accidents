@@ -2,6 +2,7 @@
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, set, get } from 'firebase/database';
 import { getFirestore } from 'firebase/firestore';
+import { getAuth, GoogleAuthProvider, GithubAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
     apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -13,9 +14,14 @@ const firebaseConfig = {
     appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID
 };
 
+const provider = {
+    google: new GoogleAuthProvider(),
+    gitHub: new GithubAuthProvider()
+  }
+
 const app = initializeApp(firebaseConfig);
 const rdb = getDatabase(app);
 const db = getFirestore(app);
+const auth = getAuth(app)
 
-export { rdb, db, ref, set, get };
-console.log('aj')
+export { rdb, db, ref, set, get, auth, provider};
